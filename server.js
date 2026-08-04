@@ -15,7 +15,7 @@ app.post('/wave/webhook', (req, res) => {
     res.status(200).send("OK");
 });
 
-const PORT = process.env.PORT || 10000;
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
     console.log(`Serveur démarré sur le port ${PORT}`);
 });
