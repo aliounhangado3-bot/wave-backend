@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 
-app.use(express.json());
+app.use(express.application/json());
 app.use(express.urlencoded({ extended: true }));
 
 // Route de test
