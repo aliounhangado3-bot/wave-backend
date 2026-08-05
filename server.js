@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 // Route de test
 app.get('/', (req, res) => {
@@ -10,8 +11,7 @@ app.get('/', (req, res) => {
 
 // Webhook Wave
 app.post('/wave/webhook', (req, res) => {
-    const data = req.body;
-    console.log("Webhook Wave reçu :", data);
+    console.log("Webhook Wave reçu :", req.body);
     res.status(200).send("OK");
 });
 
